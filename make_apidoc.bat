@@ -1,3 +1,5 @@
+call .venv/Scripts/activate.bat
+
 set /p project=project: 
 set /p author=author: 
 

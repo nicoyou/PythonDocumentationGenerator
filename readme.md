@@ -1,30 +1,33 @@
 # Pythonのドキュメント生成
 
-### 以下のバッチファイルを実行する
-
+### 1. 以下のバッチファイルを実行する
 setup.bat
 
+---
+
+### 2. project ディレクトリ内にドキュメントを生成したいコードを追加する
+
+---
+
+### 3. 以下のバッチファイルを実行する
 make_apidoc.bat
 
 ---
-### ./docs/conf.py の内容を以下のように編集する
+
+### 4. ./docs/conf.py に以下のコードを追加する
 
 ```python
-import os
 import sys
-sys.path.insert(0, '')				# コメントアウトを解除
+import sphinx_rtd_theme
 
-extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.todo',
-    'sphinx_rtd_theme',				# 追加
-]
+sys.path.insert(0, "")
 
-language = 'ja'						# 変更
+extensions.append("sphinxcontrib.jquery")
+language = "ja"
+html_theme = "sphinx_rtd_theme"
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 ```
 
 ---
-### バッチファイルを実行してドキュメントをビルドする
-
+### 5. 以下のバッチファイルを実行してドキュメントをビルドする
 build_document.bat
