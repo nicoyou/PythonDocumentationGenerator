@@ -10,7 +10,7 @@ setup.bat
 ---
 
 ### 3. 以下のバッチファイルを実行する
-make_apidoc.bat
+1_sphinx_apidoc.bat
 
 ---
 
@@ -30,4 +30,4 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 ---
 ### 5. 以下のバッチファイルを実行してドキュメントをビルドする
-build_document.bat
+2_generate_documentation.bat

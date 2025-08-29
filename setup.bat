@@ -5,4 +5,4 @@ pip install -r requirements.txt
 
 mkdir project
 
-pause
+timeout /t 5
